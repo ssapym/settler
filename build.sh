@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # install required vagrant plugin to handle reloads during provisioning
-vagrant plugin list|grep vagrant-reloada 2>&1 > /dev/null
+vagrant plugin list|grep vagrant-reload 2>&1 > /dev/null
 if [ 0 -eq $? ];then
 	vagrant plugin install vagrant-reload
 fi
