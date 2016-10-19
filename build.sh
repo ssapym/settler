@@ -2,7 +2,7 @@
 
 # install required vagrant plugin to handle reloads during provisioning
 vagrant plugin list|grep vagrant-reload 2>&1 > /dev/null
-if [ 0 -eq $? ];then
+if [ 1 -eq $? ];then
 	vagrant plugin install vagrant-reload
 fi
 
