@@ -4,7 +4,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # VirtualBox
   config.vm.define "virtualbox" do |vb|
     # Configure The Box
-    vb.vm.box = 'chef/ubuntu-14.04'
+    vb.vm.box = 'bento/ubuntu-16.04'
     vb.vm.hostname = 'homestead'
     config.vm.provider :virtualbox do |vb|
       vb.customize ['modifyvm', :id, '--memory', '2048']
@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # VMware Fusion
   config.vm.define "vmware_fusion" do |vf|
     # Configure The Box
-    vf.vm.box = 'chef/ubuntu-14.04'
+    vf.vm.box = 'bento/ubuntu-16.04'
     vf.vm.hostname = 'homestead'
     config.vm.provider :vmware_fusion do |vf|
       vf.memory = 2048
@@ -35,7 +35,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Parallels Desktop
   config.vm.define "parallels_desktop" do |pd|
     # Configure The Box
-    pd.vm.box = 'parallels/ubuntu-14.04'
+    pd.vm.box = 'parallels/ubuntu-16.04'
     pd.vm.hostname = 'homestead'
     config.vm.provider :parallels do |pd|
       pd.name = 'homestead'
